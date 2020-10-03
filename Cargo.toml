@@ -1,0 +1,13 @@
+[package]
+name = "prose-complete"
+version = "0.1.0"
+authors = ["Alexander Miller <alexanderm@web.de>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+emacs = "0.14"
+trie-rs = "0.1.1"
+once_cell = "1.4.1"
