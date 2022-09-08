@@ -28,6 +28,10 @@ fn lookup<'a>(env: &'a Env, str: String) -> Result<Value> {
         None => return on_error(env, "Failed to aquire trie instance"),
     };
 
+    if str.is_empty() {
+        return env.call("list", &[]);
+    }
+
     let strings_found: Vec<String> = trie
         .predictive_search(str)
         .into_iter()
